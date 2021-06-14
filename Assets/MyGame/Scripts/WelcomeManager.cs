@@ -20,7 +20,7 @@ public class WelcomeManager : MonoBehaviour
 
         data.name = nameInput.text;
         data.correctAnswers = 0;
-        data.maxSum += 10;
+        data.maxSum = 10;
         data.attempts = data.maxSum;
 
         data.sums = new List<int>();

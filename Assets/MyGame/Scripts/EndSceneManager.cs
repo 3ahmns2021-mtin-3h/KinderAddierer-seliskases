@@ -12,7 +12,7 @@ public class EndSceneManager : MonoBehaviour
     private void Start()
     {
         nameText.text = WelcomeManager.currentData.name.ToString();
-        correctAnswerText.text = WelcomeManager.currentData.correctAnswers.ToString();
+        correctAnswerText.text = WelcomeManager.currentData.correctAnswers.ToString() + "/" + WelcomeManager.currentData.maxSum;
     }
 
     public void PlayAgain()

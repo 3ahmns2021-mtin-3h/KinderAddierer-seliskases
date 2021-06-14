@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     public Text attemptsText;
     public Text nameText;
     public Text sumText;
+    public Text infoText;
 
     public Color startColor;
     public Color trueColor;
@@ -22,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        sum = WelcomeManager.currentData.sums[Random.Range(0, WelcomeManager.currentData.sums.Count)];
+        sum = WelcomeManager.currentData.sums[UnityEngine.Random.Range(0, WelcomeManager.currentData.sums.Count)];
         WelcomeManager.currentData.sums.Remove(sum);
         backroundImage.color = startColor;
 
@@ -35,16 +37,20 @@ public class GameManager : MonoBehaviour
     {
         if(summandOneField.text == "" || summandTwoField.text == "")
         {
+            infoText.text = "Du gibst keine Zahl ein!";
             return;
         }
 
         if (int.Parse(summandOneField.text) + int.Parse(summandTwoField.text)  != sum)
         {
+            correct = false;
+            infoText.text = "";
             backroundImage.color = falseColor;
             return;
         }
 
         correct = true;
+        infoText.text = "";
         backroundImage.color = trueColor;
     }
 
@@ -62,6 +68,9 @@ public class GameManager : MonoBehaviour
             }
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            return;
         }
+
+        infoText.text = "Die Rechnung muss zuerst richtig sein!";
     }
 }

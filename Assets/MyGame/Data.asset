@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b5ead7a61b7cec4f854c8f93c1e507d, type: 3}
-  m_Name: Simon
+  m_Name: Data
   m_EditorClassIdentifier: 
   playerName: 
-  attempts: 10
-  correctAnswers: 0
-  maxSum: 0
-  sums: 01000000020000000300000004000000050000000700000008000000090000000a000000
+  attempts: 8
+  correctAnswers: 2
+  maxSum: 10
+  sums: 01000000020000000300000004000000070000000800000009000000
