@@ -8,18 +8,26 @@ public class WelcomeManager : MonoBehaviour
 {
     public InputField nameInput;
     public Data data;
-    
+    public static Data currentData { get; private set; }
     public void StartGame()
     {
-        if(nameInput.text == null || nameInput.text == "")
+        currentData = data;
+
+        if (nameInput.text == null || nameInput.text == "")
         {
             return;
         }
 
-        data.maxSum = 10;
-        int sum = Random.Range(2, data.maxSum);
-        data.summandOne = Random.Range(1, sum);
-        data.summandTwo = sum - data.summandOne;
+        data.name = nameInput.text;
+        data.correctAnswers = 0;
+        data.attempts = 10;
+
+        data.sums = new List<int>();
+
+        for (int i = 0; i < 10; i++)
+        {
+            data.sums.Add(i + 1);
+        }
 
         SceneManager.LoadScene(1);
     }

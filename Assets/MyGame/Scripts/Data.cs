@@ -6,8 +6,7 @@ using UnityEngine;
 public class Data : ScriptableObject
 {
     public string playerName;
-    public int maxSum;
-    public int summandOne;
-    public int summandTwo;
     public int attempts;
+    public int correctAnswers;
+    public List<int> sums = new List<int>();
 }

@@ -786,8 +786,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2121911775}
-        m_TargetAssemblyTypeName: MainSceneController, Assembly-CSharp
-        m_MethodName: CheckAddition
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CheckAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1753,8 +1753,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2121911775}
-        m_TargetAssemblyTypeName: MainSceneController, Assembly-CSharp
-        m_MethodName: NextAttempt
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: NextExercice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1989,6 +1989,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97116f529eb158d4090520a29bc7773a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backroundImage: {fileID: 634229494}
+  summandOneField: {fileID: 1261446901}
+  summandTwoField: {fileID: 116579989}
+  attemptsText: {fileID: 2146840874}
+  nameText: {fileID: 863402491}
+  sumText: {fileID: 950707157}
+  startColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
+  trueColor: {r: 0.07168019, g: 1, b: 0, a: 1}
+  falseColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &2121911776
 Transform:
   m_ObjectHideFlags: 0
