@@ -20,11 +20,12 @@ public class WelcomeManager : MonoBehaviour
 
         data.name = nameInput.text;
         data.correctAnswers = 0;
-        data.attempts = 10;
+        data.maxSum += 10;
+        data.attempts = data.maxSum;
 
         data.sums = new List<int>();
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < data.maxSum; i++)
         {
             data.sums.Add(i + 1);
         }
